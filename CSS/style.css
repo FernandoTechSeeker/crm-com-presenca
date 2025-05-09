@@ -1,0 +1,370 @@
+/* Reset simples – tira margem e padding padrão de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Faz com que largura/altura incluam borda e padding */
+  }
+  
+  /* Estilo base do corpo da página */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F5F5F5;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;           /* tira espaçamentos externos */
+    padding: 0;          /* evita padding lateral geral */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;   /* força a altura total da tela */
+  }
+  
+  
+  header {
+    background-color: #FFFFFF;
+    padding: 16px 32px;
+    border-bottom: 1px solid #DDDDDD;
+  }
+  
+  /* FOOTER – centralizado e com espaçamento adequado */
+footer {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 24px 32px;
+    margin-top: 48px;
+    font-size: 14px;
+    border-top: 1px solid #DDDDDD;
+    width: 100%;
+  }
+  
+  
+  
+  
+  /* Menu horizontal com espaçamento entre os itens */
+  .menu {
+    display: flex;
+    gap: 24px;
+    list-style: none; /* Tira as bolinhas do menu */
+    font-size: 16px;
+  }
+  
+  /* Ícones do menu – azul e com espaço à direita */
+  .menu i {
+    margin-right: 8px;
+    color: #1E90FF; /* Azul vibrante */
+  }
+  
+  main {
+    max-width: 1200px; /* Aumenta a largura do quadro branco */
+    margin: 32px auto;
+    background-color: #FFFFFF;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  
+  
+  
+  
+  /* Títulos principais e subtítulos com azul e margem */
+  h1, h2 {
+    margin-bottom: 16px;
+    color: #1E90FF;
+  }
+  
+  /* Links azuis sem sublinhado */
+  a {
+    color: #1E90FF;
+    text-decoration: none;
+  }
+  
+  /* Estilo de status "Ativo" */
+  .status.ativo {
+    color: #2E8B57; /* Verde escuro */
+    font-weight: bold;
+  }
+  
+  /* Estilo de status "Pendente" */
+  .status.pendente {
+    color: #FFA500; /* Laranja */
+    font-weight: bold;
+  }
+  
+  /* Citação com barra azul na lateral */
+  blockquote {
+    font-style: italic;
+    border-left: 4px solid #1E90FF;
+    padding-left: 16px;
+    margin: 24px 0;
+  }
+  
+  /* === FORMULÁRIO DE CADASTRO === */
+  
+  /* Formulário em duas colunas */
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  /* Cada grupo de campo empilhado (label em cima, input embaixo) */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Label do campo */
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333333;
+  }
+  
+  /* Campos de input, select e textarea padrão */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid #DDDDDD;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+  }
+  
+  /* Área de observação ocupa duas colunas */
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+    grid-column: span 2;
+  }
+  
+  /* Botão azul com efeito hover */
+  button {
+    grid-column: span 2;
+    padding: 12px;
+    background-color: #1E90FF;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  /* Hover no botão */
+  button:hover {
+    background-color: #187bcd;
+  }
+  
+  /* === CARDS DA HOME === */
+
+/* Container dos cards com layout fluido e responsivo */
+.cards-informativos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 24px;
+    margin-top: 32px;
+  }
+  
+  
+  /* Cada card com fundo branco, sombra e padding */
+  .card {
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    min-height: 140px; /* Mantém todos os cards com altura mínima igual */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaça o conteúdo igualmente */
+  }
+  
+  /* Ícone do card */
+  .card i {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #1E90FF;
+  }
+  
+  /* Título do card */
+  .card strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  /* === TABELA DE CLIENTES === */
+  
+  .tabela-clientes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  /* Cabeçalho da tabela com fundo azul */
+  .tabela-clientes th {
+    background-color: #1E90FF;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  /* Células da tabela */
+  .tabela-clientes td {
+    padding: 12px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+  }
+  
+  /* Links da tabela */
+  .tabela-clientes a {
+    color: #1E90FF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Hover nos links da tabela */
+  .tabela-clientes a:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* === ESTILO: Detalhe do Cliente === */
+
+main {
+    max-width: 800px;
+    margin: 32px auto;
+    background-color: #FFFFFF;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  main h1 {
+    font-size: 24px;
+    color: #1E90FF;
+    margin-bottom: 24px;
+  }
+  
+  main h2 {
+    font-size: 20px;
+    color: #1E90FF;
+    margin: 32px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  main strong {
+    font-weight: bold;
+  }
+  
+  main p {
+    margin-bottom: 8px;
+  }
+  
+  main ul {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+  
+  .voltar {
+    display: inline-block;
+    margin-top: 24px;
+    color: #1E90FF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .voltar:hover {
+    text-decoration: underline;
+  }
+  
+ /* === LOGIN === */
+
+.tela-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 16px 24px;
+    min-height: calc(100vh - 100px); /* espaço pro rodapé */
+    background-color: #F5F5F5;
+  }
+  
+  .login-titulo {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #1E90FF;
+  }
+  
+  .avatar-placeholder {
+    width: 120px;
+    height: 120px;
+    background-color: #eee;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 32px;
+  }
+  
+  .login-box {
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .login-box button {
+    width: 100%;
+  }
+  
+  .esqueci-senha {
+    text-align: center;
+    margin-top: 16px;
+  }
+  
+  .esqueci-senha a {
+    color: #1E90FF;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+ /* DESTAQUE EXCLUSIVO PARA A PÁGINA "Presença em Cada Resposta" */
+.destaque {
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    margin-top: 32px;
+  }
+  
+  /* Deixa o blockquote mais bonito e suave */
+  blockquote {
+    background-color: #f0f8ff;
+    border-left: 4px solid #1E90FF;
+    padding: 16px;
+    font-style: italic;
+    border-radius: 6px;
+    margin-top: 24px;
+    color: #333;
+  }
+  
+  /* Aumenta um pouco o ícone no título */
+  .apresentacao h1 i {
+    font-size: 24px;
+    margin-right: 8px;
+  }
+  

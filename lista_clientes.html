@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Clientes - CRM com Presença</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><i class="bi bi-plus-square"></i> <a href="cadastrar-cliente.html">Cadastrar Cliente</a></li>
+        <li><i class="bi bi-list-ul"></i> <a href="lista_clientes.html">Lista de Cliente</a></li>
+        <li><i class="bi bi-chat-dots"></i> <a href="presenca-em-cada-resposta.html">Presença em Cada Resposta</a></li>
+        <li><i class="bi bi-box-arrow-right"></i> <a href="login.html">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Lista de Clientes</h1>
+
+    <!-- Adicionada a classe aqui 👇 -->
+    <table class="tabela-clientes">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Telefone</th>
+          <th>Empresa</th>
+          <th>Status</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Carla Souza</td>
+          <td>carla@email.com</td>
+          <td>(11) 91234-5678</td>
+          <td>ABC Ltda</td>
+          <td><span class="status ativo">Ativo</span></td>
+          <td><a href="#"><i class="bi bi-eye"></i> Ver Detalhes</a></td>
+        </tr>
+        <tr>
+          <td>João Pereira</td>
+          <td>joao@email.com</td>
+          <td>(21) 99876-4321</td>
+          <td>XPTO S/A</td>
+          <td><span class="status pendente">Aguardando retorno</span></td>
+          <td><a href="#"><i class="bi bi-eye"></i> Ver Detalhes</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>© 2025 Fernando Canto • Projeto Pessoal</p>
+    <p>Acolher começa no primeiro acesso.</p>
+  </footer>
+</body>
+</html>
