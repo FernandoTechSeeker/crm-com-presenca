@@ -3,40 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login - CRM com Presença</title>
-  <link rel="stylesheet" href="CSS/style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <title>CRM com Presença - Login</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <main class="tela-login">
-    <h1 class="login-titulo">CRM com Presença</h1>
-
-    <div class="avatar-placeholder"></div>
-
-    <div class="login-box">
-      <form>
-        <div class="form-group">
-          <label for="email"><i class="bi bi-envelope"></i> E-mail</label>
-          <input type="email" id="email" placeholder="Digite seu e-mail" />
-        </div>
-
-        <div class="form-group">
-          <label for="senha"><i class="bi bi-lock"></i> Senha</label>
-          <input type="password" id="senha" placeholder="Digite sua senha" />
-        </div>
-
-        <button type="submit">Entrar</button>
-      </form>
-
-      <p class="esqueci-senha">
-        <a href="#"><i class="bi bi-question-circle"></i> Esqueceu a senha?</a>
-      </p>
+  <div class="login-container">
+    <div class="logo">
+      <img src="logo.png" alt="Logo CRM com Presença" />
+      <h1>CRM com <strong>Presença</strong></h1>
     </div>
-  </main>
+    <form class="login-form">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="Digite seu e-mail" />
+      
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="Digite sua senha" />
 
-  <footer>
-    <p>© 2025 Fernando Canto • Projeto Pessoal</p>
-    <p>Acolher começa no primeiro acesso.</p>
-  </footer>
+      <button type="submit">Entrar</button>
+      <a href="#">Esqueceu a senha?</a>
+    </form>
+    <footer>
+      <p>© 2025 Fernando Canto – Projeto Pessoal</p>
+      <p>Acolher começa no primeiro acesso.</p>
+    </footer>
+  </div>
 </body>
 </html>

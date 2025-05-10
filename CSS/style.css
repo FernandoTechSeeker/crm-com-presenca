@@ -17,6 +17,7 @@
     flex-direction: column;
     min-height: 100vh;   /* força a altura total da tela */
   }
+
   
   
   header {
@@ -368,3 +369,75 @@ main {
     margin-right: 8px;
   }
   
+   
+
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 320px;
+}
+
+.logo img {
+  width: 48px;
+}
+
+.logo h1 {
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.login-form label {
+  text-align: left;
+  margin: 8px 0 4px;
+  font-weight: bold;
+}
+
+.login-form input {
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #1e90ff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form a {
+  margin-top: 12px;
+  display: inline-block;
+  color: #1e90ff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #555;
+}
