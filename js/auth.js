@@ -1,5 +1,6 @@
 function redirectToLogin() {
-  window.location.href = 'login.html';
+  // Caminho relativo para funcionar no GitHub Pages
+  window.location.href = 'login_home.html';
 }
 
 function getToken() {
@@ -18,7 +19,7 @@ function getUserInfo() {
         name = parsed.name || '';
         email = parsed.email || '';
       } catch (e) {
-        // ignore parsing errors
+        // Ignora erro de parse
       }
     }
   }
@@ -58,6 +59,7 @@ async function apiFetch(url, options = {}) {
   const token = getToken();
   const opts = { ...options };
   opts.headers = { ...(options.headers || {}) };
+  
   if (token) {
     opts.headers['Authorization'] = `Bearer ${token}`;
   }

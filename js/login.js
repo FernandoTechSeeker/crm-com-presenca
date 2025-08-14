@@ -1,22 +1,35 @@
-// Handle login form submission
-
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.login-form');
-  if (!form) return;
+  const emailInput = document.getElementById('email');
+  const senhaInput = document.getElementById('senha');
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('senha').value.trim();
+    const email = (emailInput.value || '').trim();
+    const senha = (senhaInput.value || '').trim();
 
-    if (!email || !password) {
-      alert('Por favor, preencha e-mail e senha.');
+    // Validação simples
+    if (!email || !senha) {
+      alert('Preencha e-mail e senha.');
       return;
     }
 
-    // In a real app you'd authenticate here.
-    // Redirect to home page after pseudo-login
+    // TODO: trocar por chamada real de API
+    // Exemplo de mock de sucesso:
+    const loginOk = true; // substitua pela verificação real
+
+    if (!loginOk) {
+      alert('Credenciais inválidas.');
+      return;
+    }
+
+    // Salva sessão (ajuste quando tiver token real)
+    localStorage.setItem('token', 'token-falso-exemplo');
+    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userName', email.split('@')[0]);
+
+    // Redireciona usando caminho relativo (funciona no GitHub Pages)
     window.location.href = 'index.html';
   });
 });
