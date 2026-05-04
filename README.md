@@ -1,34 +1,85 @@
 # CRM com Presença
 
-Este não é um CRM comum.
+Sistema web em desenvolvimento para cadastro, organização e acompanhamento de clientes, com foco em atendimento humanizado, controle operacional e registro de informações importantes.
 
-Este é um sistema criado para mostrar como seria o meu jeito de atender, ouvir e cuidar de cada cliente — com atenção, empatia e propósito.
+## Visão geral
 
-Foi construído com HTML, CSS e JavaScript. O back-end será integrado em Java.
+O **CRM com Presença** é um projeto autoral criado para demonstrar como a tecnologia pode apoiar processos de atendimento, organização de clientes e acompanhamento de relacionamentos.
 
-Cada parte desse sistema carrega intenção: não para ser um produto final de uso comercial, mas sim um projeto pessoal com alma.
+A proposta é unir estrutura operacional com uma abordagem mais cuidadosa no contato com cada cliente.
 
----
+## Objetivo do projeto
 
-## Por quê?
+Criar uma aplicação simples e funcional para:
 
-Porque acredito que tecnologia também pode escutar.  
-Pode cuidar.  
-Pode conectar.
+- cadastrar clientes;
+- organizar informações de atendimento;
+- visualizar registros importantes;
+- apoiar rotinas de acompanhamento;
+- demonstrar lógica de sistema aplicada a um problema real.
 
-Esse projeto é sobre **presença real em cada resposta.**
+## Tecnologias utilizadas
 
----
+- HTML
+- CSS
+- JavaScript
+- Bootstrap Icons
+- Java — planejado para futura integração com back-end
 
-## Em construção
+## Funcionalidades atuais
 
-- Interface com cadastro e visualização de clientes  
-- Tela especial com manifesto de acolhimento  
-- Back-end em desenvolvimento (Java)
+- Página inicial do sistema
+- Menu de navegação
+- Cards informativos de atendimento
+- Estrutura para cadastro de clientes
+- Estrutura para listagem de clientes
+- Tela com manifesto de acolhimento e presença no atendimento
 
----
+## Funcionalidades previstas
+
+- Validações com JavaScript
+- Persistência de dados
+- Integração futura com back-end em Java
+- Melhorias de responsividade
+- Organização da documentação com imagens do sistema
+- Publicação da demonstração com GitHub Pages
+
+## Status do projeto
+
+Em desenvolvimento.
+
+A versão atual tem foco na estrutura inicial da interface, navegação entre telas e validação da ideia do sistema.
+
+## Estrutura inicial do projeto
+
+```text
+crm-com-presenca/
+├── index.html
+├── cadastrar-cliente.html
+├── lista_clientes.html
+├── presenca-em-cada-resposta.html
+├── login_home.html
+├── CSS/
+│   └── style.css
+└── js/
+    └── auth.js
+```
+
+## Aprendizados
+
+Este projeto está sendo usado para praticar:
+
+- estruturação de interfaces;
+- organização de páginas HTML;
+- estilização com CSS;
+- lógica com JavaScript;
+- pensamento operacional aplicado a sistemas;
+- documentação de projetos no GitHub;
+- evolução de um projeto simples para uma solução mais apresentável.
 
 ## Autor
 
 **Fernando Canto**  
-[LinkedIn](https://linkedin.com/in/fernandocanto) | [GitHub](https://github.com/FernandoTechSeeker)
+Estudante de Análise e Desenvolvimento de Sistemas | Dados, sistemas e automação para eficiência operacional.
+
+[LinkedIn](https://www.linkedin.com/in/fernandocanto/) | [GitHub](https://github.com/FernandoTechSeeker)
