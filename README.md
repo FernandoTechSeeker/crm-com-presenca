@@ -2,6 +2,12 @@
 
 Sistema web em desenvolvimento para cadastro, organização e acompanhamento de clientes, com foco em atendimento humanizado, controle operacional e registro de informações importantes.
 
+## Demonstração
+
+Acesse a versão publicada no GitHub Pages:
+
+[Ver demonstração online](https://fernandotechseeker.github.io/crm-com-presenca/login_home.html)
+
 ## Visão geral
 
 O **CRM com Presença** é um projeto autoral criado para demonstrar como a tecnologia pode apoiar processos de atendimento, organização de clientes e acompanhamento de relacionamentos.
@@ -28,6 +34,7 @@ Criar uma aplicação simples e funcional para:
 
 ## Funcionalidades atuais
 
+- Página de login
 - Página inicial do sistema
 - Menu de navegação
 - Cards informativos de atendimento
@@ -42,7 +49,7 @@ Criar uma aplicação simples e funcional para:
 - Integração futura com back-end em Java
 - Melhorias de responsividade
 - Organização da documentação com imagens do sistema
-- Publicação da demonstração com GitHub Pages
+- Evolução da demonstração publicada com GitHub Pages
 
 ## Status do projeto
 
