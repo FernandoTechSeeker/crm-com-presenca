@@ -3,33 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailInput = document.getElementById('email');
   const senhaInput = document.getElementById('senha');
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
 
     const email = (emailInput.value || '').trim();
     const senha = (senhaInput.value || '').trim();
 
-    // Validação simples
-    if (!email || !senha) {
-      alert('Preencha e-mail e senha.');
+    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+      alert('Informe um e-mail válido para acessar a demonstração.');
       return;
     }
 
-    // TODO: trocar por chamada real de API
-    // Exemplo de mock de sucesso:
-    const loginOk = true; // substitua pela verificação real
-
-    if (!loginOk) {
-      alert('Credenciais inválidas.');
+    if (!senha || senha.length < 4) {
+      alert('Informe uma senha com pelo menos 4 caracteres.');
       return;
     }
 
-    // Salva sessão (ajuste quando tiver token real)
-    localStorage.setItem('token', 'token-falso-exemplo');
-    localStorage.setItem('userEmail', email);
-    localStorage.setItem('userName', email.split('@')[0]);
-
-    // Redireciona usando caminho relativo (funciona no GitHub Pages)
+    window.crm.setSession({ email });
     window.location.href = 'index.html';
   });
 });
