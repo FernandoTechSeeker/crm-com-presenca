@@ -11,17 +11,35 @@
   <header>
     <nav>
       <ul class="menu">
+        <li id="user-info"></li>
         <li><i class="bi bi-house"></i> <a href="index.html">Home</a></li>
         <li><i class="bi bi-plus-square"></i> <a href="cadastrar-cliente.html">Cadastrar Cliente</a></li>
         <li><i class="bi bi-list-ul"></i> <a href="lista_clientes.html">Lista de Clientes</a></li>
         <li><i class="bi bi-chat-dots"></i> <a href="presenca-em-cada-resposta.html">Presença em Cada Resposta</a></li>
+        <li><i class="bi bi-box-arrow-right"></i> <a href="login_home.html" id="logoutBtn">Sair</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <h1>Lista de Clientes</h1>
-    <p>Visualização demonstrativa para acompanhamento de clientes, status e ações de relacionamento.</p>
+    <p>Busque, filtre, visualize, edite ou exclua clientes cadastrados no CRM demonstrativo.</p>
+
+    <section class="filters-bar">
+      <div class="form-group">
+        <label for="busca"><i class="bi bi-search"></i> Buscar cliente</label>
+        <input type="search" id="busca" placeholder="Nome, e-mail, telefone ou empresa">
+      </div>
+
+      <div class="form-group">
+        <label for="filtro-status"><i class="bi bi-funnel"></i> Filtrar por status</label>
+        <select id="filtro-status">
+          <option value="">Todos</option>
+          <option value="Ativo">Ativo</option>
+          <option value="Aguardando retorno">Aguardando retorno</option>
+        </select>
+      </div>
+    </section>
 
     <table class="tabela-clientes">
       <thead>
@@ -31,25 +49,12 @@
           <th>Telefone</th>
           <th>Empresa</th>
           <th>Status</th>
-          <th>Ação</th>
+          <th>Ações</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody data-client-list>
         <tr>
-          <td>Carla Souza</td>
-          <td>carla@email.com</td>
-          <td>(11) 91234-5678</td>
-          <td>ABC Ltda</td>
-          <td><span class="status ativo">Ativo</span></td>
-          <td><a href="#"><i class="bi bi-eye"></i> Ver Detalhes</a></td>
-        </tr>
-        <tr>
-          <td>João Pereira</td>
-          <td>joao@email.com</td>
-          <td>(21) 99876-4321</td>
-          <td>XPTO S/A</td>
-          <td><span class="status pendente">Aguardando retorno</span></td>
-          <td><a href="#"><i class="bi bi-eye"></i> Ver Detalhes</a></td>
+          <td colspan="6">Carregando clientes...</td>
         </tr>
       </tbody>
     </table>
@@ -57,7 +62,9 @@
 
   <footer>
     <p>© 2026 Fernando Canto — Projeto de Portfólio</p>
-    <p>Versão demonstrativa com dados fictícios.</p>
+    <p>CRUD demonstrativo com dados salvos no navegador.</p>
   </footer>
+  <script src="js/crm.js"></script>
+  <script>window.crm.setupClientList();</script>
 </body>
 </html>
