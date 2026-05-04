@@ -11,32 +11,34 @@
   <header>
     <nav>
       <ul class="menu">
+        <li id="user-info"></li>
         <li><i class="bi bi-house"></i> <a href="index.html">Home</a></li>
         <li><i class="bi bi-plus-square"></i> <a href="cadastrar-cliente.html">Cadastrar Cliente</a></li>
         <li><i class="bi bi-list-ul"></i> <a href="lista_clientes.html">Lista de Clientes</a></li>
         <li><i class="bi bi-chat-dots"></i> <a href="presenca-em-cada-resposta.html">Presença em Cada Resposta</a></li>
+        <li><i class="bi bi-box-arrow-right"></i> <a href="login_home.html" id="logoutBtn">Sair</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Cadastrar Novo Cliente</h1>
-    <p>Formulário demonstrativo para registro inicial de clientes e organização das informações de atendimento.</p>
+    <h1 data-form-title>Cadastrar Novo Cliente</h1>
+    <p>Formulário para registrar, editar e organizar informações de atendimento.</p>
 
-    <form>
+    <form data-client-form>
       <div class="form-group">
         <label for="nome"><i class="bi bi-person"></i> Nome completo</label>
-        <input type="text" id="nome" name="nome" placeholder="Ex: Carla Souza">
+        <input type="text" id="nome" name="nome" placeholder="Ex: Carla Souza" required>
       </div>
 
       <div class="form-group">
         <label for="email"><i class="bi bi-envelope"></i> E-mail</label>
-        <input type="email" id="email" name="email" placeholder="cliente@email.com">
+        <input type="email" id="email" name="email" placeholder="cliente@email.com" required>
       </div>
 
       <div class="form-group">
         <label for="telefone"><i class="bi bi-telephone"></i> Telefone</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="(81) 99999-9999">
+        <input type="tel" id="telefone" name="telefone" placeholder="(81) 99999-9999" required>
       </div>
 
       <div class="form-group">
@@ -44,9 +46,9 @@
         <input type="text" id="empresa" name="empresa" placeholder="Empresa ou organização">
       </div>
 
-      <div class="form-group" style="grid-column: span 2;">
+      <div class="form-group">
         <label for="motivo"><i class="bi bi-question-circle"></i> Motivo do contato</label>
-        <select id="motivo" name="motivo">
+        <select id="motivo" name="motivo" required>
           <option value="">Selecione</option>
           <option value="orcamento">Orçamento</option>
           <option value="duvida">Dúvida</option>
@@ -55,18 +57,28 @@
         </select>
       </div>
 
+      <div class="form-group">
+        <label for="status"><i class="bi bi-activity"></i> Status</label>
+        <select id="status" name="status">
+          <option value="Ativo">Ativo</option>
+          <option value="Aguardando retorno">Aguardando retorno</option>
+        </select>
+      </div>
+
       <div class="form-group" style="grid-column: span 2;">
         <label for="obs"><i class="bi bi-pencil-square"></i> Observações</label>
         <textarea id="obs" name="obs" placeholder="Registre informações importantes do atendimento."></textarea>
       </div>
 
-      <button type="submit"><i class="bi bi-person-check-fill"></i> Cadastrar Cliente</button>
+      <button type="submit"><i class="bi bi-person-check-fill"></i> Salvar Cliente</button>
     </form>
   </main>
 
   <footer>
     <p>© 2026 Fernando Canto — Projeto de Portfólio</p>
-    <p>Versão demonstrativa com dados fictícios.</p>
+    <p>CRUD demonstrativo com dados salvos no navegador.</p>
   </footer>
+  <script src="js/crm.js"></script>
+  <script>window.crm.setupClientForm();</script>
 </body>
 </html>
