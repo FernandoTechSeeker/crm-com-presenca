@@ -11,10 +11,12 @@
   <header>
     <nav>
       <ul class="menu">
+        <li id="user-info"></li>
         <li><i class="bi bi-house"></i> <a href="index.html">Home</a></li>
         <li><i class="bi bi-plus-square"></i> <a href="cadastrar-cliente.html">Cadastrar Cliente</a></li>
         <li><i class="bi bi-list-ul"></i> <a href="lista_clientes.html">Lista de Clientes</a></li>
         <li><i class="bi bi-chat-dots"></i> <a href="presenca-em-cada-resposta.html">Presença em Cada Resposta</a></li>
+        <li><i class="bi bi-box-arrow-right"></i> <a href="login_home.html" id="logoutBtn">Sair</a></li>
       </ul>
     </nav>
   </header>
@@ -28,33 +30,35 @@
     <section class="cards-informativos">
       <article class="card">
         <i class="bi bi-people"></i>
-        <h2>Clientes atendidos hoje</h2>
-        <p>3 atendimentos registrados</p>
+        <h2>Clientes cadastrados</h2>
+        <p data-dashboard="total">Carregando...</p>
       </article>
 
       <article class="card">
         <i class="bi bi-person-plus"></i>
         <h2>Último cliente cadastrado</h2>
-        <p>Carla Souza — 11h45</p>
+        <p data-dashboard="last">Carregando...</p>
       </article>
 
       <article class="card">
         <i class="bi bi-calendar-event"></i>
-        <h2>Próximo atendimento</h2>
-        <p>João Pereira — 14h00</p>
+        <h2>Próximo acompanhamento</h2>
+        <p data-dashboard="next">Carregando...</p>
       </article>
 
       <article class="card">
         <i class="bi bi-exclamation-circle"></i>
         <h2>Pendências abertas</h2>
-        <p>2 pendências em acompanhamento</p>
+        <p data-dashboard="pending">Carregando...</p>
       </article>
     </section>
   </main>
 
   <footer>
     <p>© 2026 Fernando Canto — Projeto de Portfólio</p>
-    <p>Versão demonstrativa com dados fictícios.</p>
+    <p>Versão demonstrativa com dados fictícios salvos no navegador.</p>
   </footer>
+  <script src="js/crm.js"></script>
+  <script>window.crm.setupDashboard();</script>
 </body>
 </html>
